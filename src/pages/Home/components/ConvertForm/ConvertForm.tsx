@@ -23,7 +23,7 @@ const ConvertForm: FC<IProps> = ({ selectData }) => {
     amount: "",
   });
 
-  const { data, mutate, isLoading, isError } = useMutation(
+  const { data, mutate, isLoading } = useMutation(
     async (data: CurrensyFormData) => {
       return await API.ConvertEndpoint({
         from: data.from,

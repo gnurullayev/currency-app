@@ -10,7 +10,7 @@ export interface ICurrensySelectData {
 }
 
 const Home = () => {
-  const { data, isLoading, isError } = useQuery("getData", async () => {
+  const { data } = useQuery("getData", async () => {
     return await API.getSymbols().then((res) => res.data.currencies);
   });
 
